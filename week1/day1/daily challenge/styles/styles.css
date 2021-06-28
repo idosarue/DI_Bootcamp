@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+
+body, html {
+    margin: 0;
+    height: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+nav {
+    background-color: #DA0037;
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+
+.nav-img {
+    height: 100%;
+    width: 100px;
+}
+
+.nav-links {
+    margin-right: 20px;
+    color: cyan;
+}
+
+a {
+    text-decoration: none;
+    color: gold;
+}
+
+
+
+li {
+    display: inline;
+    margin-left: 10px;
+}
+
+.main {
+    background-image: url("https://wallup.net/wp-content/uploads/2018/03/20/195534-Iron_Man-Tony_Stark-Robert_Downey_Jr.-748x421.jpg");
+    height: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 0.5s;
+
+}
+
+#about {
+    color: goldenrod;
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#about h1 {
+    font-size: 100px;
+}
+
+footer {
+    height: 100px;
+    background-color: crimson;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+footer a {
+    margin: 0 10px;
+}
+
+button {
+    border-radius: 4px;
+    background-color: black;
+    height: 30px;
+    border-radius: 4px;
+    color: goldenrod;
+    background-color: darkred;
+    box-shadow: 2px 2px 2px black;
+}
+
+button:hover {
+    background-color: black;
+    transition: 0.8s ease-in-out;
+} 
+
+@media all and (max-width: 480px) {
+    .main {
+        height: 100%;
+        width: 100%;
+    }
+
+    .about {
+        height: 100px;
+    }
+ }
