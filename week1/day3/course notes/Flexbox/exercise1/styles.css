@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    margin: auto;
+    background-color: white;
+    width: 700px;
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 3px solid orange;
+    padding: 5px;
+}
+
+.box {
+    background-color: aqua;
+    align-items: center;
+    height: 50px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second {
+    align-self: center;
+    height: 200px;
+    width: 70%;
+}
