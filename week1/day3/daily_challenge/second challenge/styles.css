@@ -1,0 +1,31 @@
+.main-container {
+    width: 256px;
+    height: 256px;
+    background-color: aqua;
+    display: flex;
+    /* flex-direction: column; */
+
+}
+
+
+
+.box {
+    width: 16px;
+    height: 16px;
+    margin: 1px;
+}
+
+.orange {
+    background-color: orange;
+
+}
+
+.light-brown {
+    background-color: blanchedalmond;
+
+}
+
+.brown {
+    background-color: brown;
+
+}
