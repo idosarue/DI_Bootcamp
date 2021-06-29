@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+body {
+    margin: 0;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-color: #e5e5f7;
+    opacity: 1;
+    background-image:  linear-gradient(30deg, #7a7c9c 12%, transparent 12.5%, transparent 87%, #7a7c9c 87.5%, #7a7c9c), linear-gradient(150deg, #7a7c9c 12%, transparent 12.5%, transparent 87%, #7a7c9c 87.5%, #7a7c9c), linear-gradient(30deg, #7a7c9c 12%, transparent 12.5%, transparent 87%, #7a7c9c 87.5%, #7a7c9c), linear-gradient(150deg, #7a7c9c 12%, transparent 12.5%, transparent 87%, #7a7c9c 87.5%, #7a7c9c), linear-gradient(60deg, #7a7c9c77 25%, transparent 25.5%, transparent 75%, #7a7c9c77 75%, #7a7c9c77), linear-gradient(60deg, #7a7c9c77 25%, transparent 25.5%, transparent 75%, #7a7c9c77 75%, #7a7c9c77);
+    background-size: 20px 35px;
+    background-position: 0 0, 0 0, 10px 18px, 10px 18px, 0 0, 10px 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 8px;
+    background-color: #EFEFEF;
+
+}
+
+.name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+}
+
+h1 {
+    font-size:2em;
+}
+
+span {
+    font-weight: 100;
+}
+
+.profile {
+    width: 150px;
+}
+
+hr {
+    width: 80%;
+    margin-bottom: -8px;
+    height: 8px;
+    background-color: #EFEFEF;
+    border-radius: 5px;
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100%;
+    grid-template-rows: 70vh;
+    column-gap: 10px;
+    padding: 10px;
+}
+
+.container {
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    background-color: #EFEFEF;
+    border-radius: 8px;
+}
+
+.left {
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul {
+    text-align: left;
+}
+
+li {
+    list-style: none;
+}
+
+
+.profile-con {
+    grid-column: 2/ span 2;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+h3 {
+    margin-top: 0;
+    margin-bottom: -10px;;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) { 
+    .container {
+        height: 70vh;
+        padding: 30px;
+    }
+}
+@media all and (max-width: 480px) { 
+    .container {
+        height: 90vh;
+    }
+
+    li {
+        width: 100px;
+    }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+    .container {
+        height: 80vh;
+    }
+
+    li {
+        width: 100px;
+    }
+ }
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        height: 80vh;
+    }
+
+    li {
+        width: 100px;
+    }
+ }
