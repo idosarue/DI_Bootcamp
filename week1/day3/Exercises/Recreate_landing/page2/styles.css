@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+}
+
+nav {
+    background-color: aqua;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.btn-container {
+    margin-left: 10px;
+}
+
+.main-container {
+   display: flex;
+   flex-direction: column;
+}
