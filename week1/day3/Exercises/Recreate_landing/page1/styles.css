@@ -4,7 +4,7 @@ body,html {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 100%;
+
 }
 
 header {
@@ -27,11 +27,30 @@ header {
     width: 40%;
 }
 
-.main {
+.container {
+    margin-top: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    height: 200px;
 }
 
+
+
 .con {
-    width: 40%;
+    width: 180px;
+    height: 150px;
+    background-color: aqua;
+}
+
+.l {
+    background: linear-gradient(0, salmon 40%, white 30%)
+}
+
+.m {
+    align-self: center;
+    background: linear-gradient(0, blue 40%, white 30%)
+}
+
+.r {
+    background: linear-gradient(0, green 40%, white 30%)
 }
