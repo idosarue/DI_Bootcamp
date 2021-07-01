@@ -3,19 +3,43 @@
 
 body,html {
     margin: 0;
+    background-color: lightblue;
 }
+
 
 header {
     background-image: url(images/background.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 80vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
+
+    color: black;
+    text-align: center;
+
+}
+
+
+#overlay {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    opacity: 0.8;
+    cursor: pointer;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+    color: black;
+  }
+
 
 nav,button {
     background-color: #B5EAEA;
@@ -23,4 +47,19 @@ nav,button {
 
 a {
     color: black;
+}
+
+.me {
+    border-radius: 50%;
+    width: 200px;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.portfolio img {
+    width: 200px;
 }
