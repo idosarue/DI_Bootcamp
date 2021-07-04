@@ -60,11 +60,15 @@ a {
 
 
 .portfolio img {
-    width: 10em;
+    width: 13em;
 }
 
 .row {
-    flex-wrap: nowrap;
+    margin: auto;
+}
+
+.pic {
+    text-align: center;
 }
 
 
