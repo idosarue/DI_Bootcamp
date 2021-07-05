@@ -12,6 +12,16 @@ font-family: 'Poppins', sans-serif;
 
 }
 
+.c {
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.f {
+    width: 50%;
+    margin: auto;
+}
+
 header {
     background-image: url(images/background.jpg);
     background-size: cover;
@@ -44,7 +54,7 @@ header {
   }
 
 
-nav,button {
+nav,.btn {
     background-color: #B5EAEA;
 }
 
@@ -54,8 +64,8 @@ a {
 
 .me {
     border-radius: 50%;
-    max-width: 80px;
-    max-height: 80px;
+    /* max-width: 30vw;
+    max-height: 30vh; */
 }
 
 
@@ -72,7 +82,14 @@ a {
     transform: scale(3);
 }
 
+
 .row {
+    margin: auto;
+
+}
+
+.carousel {
+    width: 70%;
     margin: auto;
 }
 
@@ -94,3 +111,6 @@ a {
     padding: 3px;
 }
 
+.container {
+    width: 90%;
+}
