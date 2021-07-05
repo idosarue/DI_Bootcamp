@@ -1,4 +1,4 @@
-let userWord = "ahoieuuaaa"
+let userWord = prompt("enter a word: ")
 let a = /[a]/g;
 let e = /[e]/g;
 let i = /[i]/g;
