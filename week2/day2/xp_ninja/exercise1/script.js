@@ -6,16 +6,20 @@ let y = 1997;
 let end = 2020;
 
 function range() {
-    var ageY = [];
-    var ageX = [];   
+    var olderAge = [];
+    var youngerAge = [];   
 
     for (let i = y; i <= end; i++) {
-        ageY.push(i);
+        olderAge.push(i-y);
+    }
+    for (let i = x; i <= end; i++) {
+        youngerAge.push(i-x);
     }
 
-    return ageY
+    console.log(olderAge)
+    console.log(youngerAge)
 
     
 
 }
-console.log(range())
+range()
