@@ -10,7 +10,7 @@ function range() {
     var ageX = [];   
 
     for (let i = y; i <= end; i++) {
-        ageY.push(i, i - y);
+        ageY.push(i);
     }
 
     return ageY
