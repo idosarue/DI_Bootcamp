@@ -85,7 +85,13 @@ let details = {
 
 let a = Object.keys(details)
 let b = Object.values(details)
-console.log(`${a[0]} ${b[0]} ${a[1]} ${b[1]} ${a[2]} ${b[2]}`)
+let x = 0;
+let sen = [];
+for(let key in details){
+  sen.push(`${a[x]} ${b[x]}`)
+  x++
+}
+console.log(sen.join(" "))
 
 // Exercise 7 : Secret Group
 let names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"]
