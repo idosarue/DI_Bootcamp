@@ -7,4 +7,4 @@ function checkDriverAge(age){
         alert("Congratulations on your first year of driving. Enjoy the ride!");
     }
 }
-checkDriverAge(18)
+checkDriverAge(18);
