@@ -1,3 +1,4 @@
+// Exercise 1 : Information
 function infoAboutMe(){
     console.log("My name is Ido, I'm 23 and I like to play guitar")
 }
