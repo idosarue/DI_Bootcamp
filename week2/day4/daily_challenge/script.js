@@ -10,8 +10,7 @@ function frame() {
         }else{
             alert("Finally..")
             hasComma = false;
-            let newWords = words.replaceAll(/\s/g, '').split(",")
-            newWords = newWords.filter(item => item);//Because an empty string evaluates to boolean false
+            let newWords = words.replaceAll(/\s/g, '').split(",").filter(item => item);//Because an empty string evaluates to boolean false
             let star = '*', dif, longest = 0,wordLen;
             for(let i = 0; i< newWords.length; i++){
                 if(newWords[i].length > longest){
