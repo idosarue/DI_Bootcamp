@@ -15,6 +15,7 @@ function frame(){
         long = Math.max(newWords[i].length)
         dif = wordLen - long
         console.log(star, newWords[i],space.repeat(dif), star);
+
     }
 
         console.log(star.repeat(long+5))
