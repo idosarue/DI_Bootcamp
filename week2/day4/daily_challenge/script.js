@@ -1,20 +1,27 @@
 
-let words = prompt("enter words seperated with comma: ");
-let newWords = words.replace(/\s+/g, '').split(",")
-let star = '*'
-let space = ' '
-let dif;
-let longest;
 
-function frame(){
-
+function frame() {
+    let words = prompt("enter words seperated with comma: ");
+    let newWords = words.replace(/\s/g, '').split(",")
+    console.log(newWords)
+    let star = '*';
+    let space = ' ';
+    let dif;
+    let longest = 0;
+    let wordLen ;
     for(let i = 0; i< newWords.length; i++){
-        longest = Math.max(newWords[i].length) 
-    }
-    console.log(star.repeat(longest+5))
+        console.log(longest);
+        if(newWords[i].length > longest){
+            longest = newWords[i].length
+        }
+        console.log(longest)
+        
+    }console.log(longest);
 
-    for(let i in newWords){ 
-        let wordLen = newWords[i].length;
+    console.log(star.repeat(longest+5));
+
+    for(let i = 0; i < newWords.length ; i++){ 
+        wordLen = newWords[i].length;
         dif = longest - wordLen;
         console.log(star, newWords[i],space.repeat(dif), star);
     }
@@ -23,4 +30,4 @@ function frame(){
 frame();
 
 
-// Hello, World, indd, aasd, frames
+// Hello, World, in, as, frame
