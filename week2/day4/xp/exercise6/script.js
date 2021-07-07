@@ -5,7 +5,8 @@ function changeEnough([quarters, dimes, nickels, pennies], price){
     nickels = 0.05 * nickels;
     pennies = 0.01 * pennies;
     sum = quarters + dimes + nickels + pennies;
-    console.log(sum > price)
+
+    return sum > price
 }
 
-changeEnough([2, 100, 0, 0], 14.11); 
+console.log(changeEnough([2, 100, 0, 0], 14.11)); 
