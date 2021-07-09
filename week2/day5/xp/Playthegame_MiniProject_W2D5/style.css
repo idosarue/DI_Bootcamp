@@ -4,4 +4,14 @@
 
 body{
     padding: 50px
+}*{
+    font-family: 'PT Sans', sans-serif;
+}
+
+body{
+    padding: 50px
+}
+
+img {
+    display: none;
 }
