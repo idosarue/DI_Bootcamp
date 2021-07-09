@@ -15,27 +15,40 @@ function playTheGame(){
             }else{
                 isNum = false;
                 computerNum = Math.floor(Math.random() * 9) + 1;
+
             }   
         }           
     }
-  let obj = {
-    computerNum1 : computerNum,
-    userNum1 : userNum
-  }
-  return obj;
+    let obj = {
+        computerNum1 : computerNum,
+        userNum1 : userNum
+      }
+      return obj;
 }
 
-let a;
-function test(userNumber = a.userNum1, computerNumber = a.computerNum1) {
+
+function test(userNumber, computerNumber) {
     let a = playTheGame();
-    console.log(userNumber)
-    console.log(computerNumber)
-    if(userNumber == computerNumber){
-        alert("Winner")
-    }else if(userNumber > computerNumber){
-        alert("Your number is bigger then the computer’s, guess again");
-        let newNum = parseInt(prompt("Enter a new number: "))
-        userNumber = newNum
+    for(let times = 0; times < 3; times++){
+        times +=1
+        userNumber = a.userNum1
+        computerNumber = a.computerNum1
+        console.log("user", userNumber)
+        console.log("Cmputer", computerNumber)
+        if(userNumber === computerNumber && userNumber != 0){
+            alert("Winner!")
+            times += 3
+        }else if(userNumber > computerNumber){
+            alert("Your number is bigger then the computer’s, guess again");
+            userNumber = parseInt(prompt("Enter a new number: "))
+        }else {
+            alert("Your number is less then the computer’s, guess again");
+            userNumber = parseInt(prompt("Enter a new number: "))
+        }
+        if (times === 3) {
+            alert("you lost!")
+        }
+        console.log("times", times)
     }
+
 }
-test(a.userNum1, a.computerNum1)
