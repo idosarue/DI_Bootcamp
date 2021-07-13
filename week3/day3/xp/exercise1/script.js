@@ -8,6 +8,7 @@ function myMove() {
       clearInterval(id);
     } else {
       pos++; 
+      box.style.top = pos +"px"
       box.style.left = pos + 'px'; 
     }
   }
