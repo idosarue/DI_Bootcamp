@@ -1,0 +1,45 @@
+body{
+    background-color: lightcoral;
+}
+
+h1{
+
+    text-align: center;
+}
+
+.container, .form-con{
+    background-color: #fff;
+
+}
+.container {
+    width: 300px;
+    text-align: center;
+    margin: auto;
+
+}
+
+.form-con {
+    padding: 20px;
+    border-bottom: 10px solid salmon;
+}
+
+#button{
+    background-color: white;
+    color: lightblue;
+}
+i{
+    display: inline;
+}
+
+
+
+input{
+    display: inline;
+    border: none;
+
+}
+
+hr{
+    background-color: lightblue;
+    width: 80%;
+}
