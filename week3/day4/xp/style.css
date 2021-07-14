@@ -21,14 +21,13 @@ button{
     margin: 4px 2px;
 
 }
-.side {
+#side {
     display: grid;
     grid-gap: 5px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(8, 1fr);
-    height: 70vh;
     width: 100px;
-    background-color: darkgrey;
+    background-color: thistle;
     border: 2px red solid;
     padding: 5px;
 }
