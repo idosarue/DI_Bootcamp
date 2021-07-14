@@ -1,4 +1,4 @@
-let listTasks = [];
+let listTasks = []
 let input = document.getElementById('myForm').firstElementChild
 let div = document.getElementsByTagName('div')[0]
 console.log(input)
