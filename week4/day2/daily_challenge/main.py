@@ -1,6 +1,13 @@
-num = 6
+from datetime import datetime
 
-num_of_i = 'i' * num
+today_date = input("Enter birth date in dd/mm/yyyy format:")
+birth_date = datetime.strptime(today_date, '%d/%m/%Y')
+age = "%d" % ((datetime.today() - birth_date).days/365)
+num = int(age[-1])
+if num > 0:
+    num_of_i = 'i' * num
+else:
+    num_of_i = 'i' * 6
 top_line = f'___{num_of_i}___'
 space = " "
 line_y = "|"
