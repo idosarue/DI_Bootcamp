@@ -1,10 +1,7 @@
 theBoard = {'1': ' ', '2': ' ', '3': ' ',
             '4': ' ', '5': ' ', '6': ' ',
             '7': ' ', '8': ' ', '9': ' '}
-board_keys = []
 
-for key in theBoard:
-    board_keys.append(key)
 
 def print_board(board):
     print(board['1'] + '  |  ' + board['2'] + '  |  ' + board['3'])
@@ -15,14 +12,23 @@ def print_board(board):
 
 
 def player_input():
-    square = input("Enter square number: ")
-    return square
+    not_valid = True
+    while not_valid:
+        square = input("Enter square number: ")
+        if not square.isnumeric():
+            print('Enter only numbers please..')
+        elif square == "0" or square == '10':
+            print('Please enter numbers between 1 and 9..')
+        else:
+            not_valid = False
+            return square
+
 
 
 def play():
     player = "X"
     counter = 0
-    for i in range(10):
+    for i in range(9):
         print_board(theBoard)
         print(f'It\'s {player}\'s turn')
         move = player_input()
@@ -73,8 +79,8 @@ def play():
             print_board(theBoard)
             break
         if counter == 9:
+            print_board(theBoard)
             print('gave over\n it\'s a tie')
-
 
         if player == "X":
             player = "O"
@@ -84,4 +90,7 @@ def play():
 
 
 
-play()
+def check_win():
+    play()
+
+check_win()
