@@ -24,6 +24,60 @@ def player_input():
             return square
 
 
+def is_game_over(player, counter):
+    if theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ':
+        print(f'player {player} won!')
+        print_board(theBoard)
+        return True
+
+    elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ':
+        print(f'player {player} won!')
+        print_board(theBoard)
+        return True
+
+
+    elif theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ':
+        print(f'player {player} won!')
+        print_board(theBoard)
+        return True
+
+
+    elif theBoard['1'] == theBoard['4'] == theBoard['7'] != ' ':
+        print(f'player {player} won!')
+        print_board(theBoard)
+        return True
+
+
+    elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ':
+        print(f'player {player} won!')
+        print_board(theBoard)
+        return True
+
+
+    elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ':
+        print(f'player {player} won!')
+        print_board(theBoard)
+        return True
+
+
+    elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ':
+        print(f'player {player} won!')
+        print_board(theBoard)
+        return True
+
+
+    elif theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ':
+        print(f'player {player} won!')
+        print_board(theBoard)
+        return True
+
+    if counter == 9:
+        print_board(theBoard)
+        print('gave over\n it\'s a tie')
+        return True
+    return False
+
+
 
 def play():
     player = "X"
@@ -39,48 +93,8 @@ def play():
             print('already filled, try again')
             continue
 
-        if theBoard['1'] == theBoard['2'] == theBoard['3'] != ' ':
-            print(f'player {player} won!')
-            print_board(theBoard)
+        if is_game_over(player, counter):
             break
-
-        elif theBoard['4'] == theBoard['5'] == theBoard['6'] != ' ':
-            print(f'player {player} won!')
-            print_board(theBoard)
-            break
-
-        elif theBoard['7'] == theBoard['8'] == theBoard['9'] != ' ':
-            print(f'player {player} won!')
-            print_board(theBoard)
-            break
-
-        elif theBoard['1'] == theBoard['4'] == theBoard['7'] != ' ':
-            print(f'player {player} won!')
-            print_board(theBoard)
-            break
-
-        elif theBoard['2'] == theBoard['5'] == theBoard['8'] != ' ':
-            print(f'player {player} won!')
-            print_board(theBoard)
-            break
-
-        elif theBoard['3'] == theBoard['6'] == theBoard['9'] != ' ':
-            print(f'player {player} won!')
-            print_board(theBoard)
-            break
-
-        elif theBoard['1'] == theBoard['5'] == theBoard['9'] != ' ':
-            print(f'player {player} won!')
-            print_board(theBoard)
-            break
-
-        elif theBoard['7'] == theBoard['5'] == theBoard['3'] != ' ':
-            print(f'player {player} won!')
-            print_board(theBoard)
-            break
-        if counter == 9:
-            print_board(theBoard)
-            print('gave over\n it\'s a tie')
 
         if player == "X":
             player = "O"
@@ -89,8 +103,4 @@ def play():
 
 
 
-
-def check_win():
-    play()
-
-check_win()
+play()
