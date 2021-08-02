@@ -279,8 +279,8 @@ input[type ="checkbox"] {
 
 .s-left, .s-right, .s-front, .s-back{
     position: absolute;
-    height: 1em;
-    bottom: 1em;
+    height: 1.3em;
+    bottom: .9em;
     box-shadow:  0 0  0.5em #000a inset;
     border-radius: 10px;
 }
