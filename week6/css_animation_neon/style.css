@@ -1,0 +1,337 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+
+
+
+
+
+:root {
+    --boxColor: rgba(243, 243, 243, 0.5);
+    --rotateSpeed: 40s;
+    --neonGreen: rgba(0, 255, 85, 0.89);
+    --neonWhite: #fff;
+    --pink: #FF00CC;
+}
+
+body {
+    background-color: #000;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    perspective: 10em;
+    perspective-origin: 50% calc(50% - 2em);
+    font-family: 'Zen Tokyo Zoo', cursive;
+}
+
+.stage {
+    height: 100px;
+    margin: auto;
+    position: absolute;
+    bottom: 1.5em;
+    left: .5em;
+    transform-style: preserve-3d;
+    transform: translateZ(10px);
+  }
+  
+  .layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-style: preserve-3d; 
+
+  }
+  
+  .layer:after {
+    content: "Neon";
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    letter-spacing: -2px;
+    color: black;
+  }
+
+  #toggle:checked ~ .layer:after {
+    animation: flicker 1.5s infinite;
+  }
+
+label {
+    background-color: #A5D6A7;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 0.5rem;
+    position: absolute;
+    bottom: 10px;
+    left: 300px;
+}
+
+input[type ="checkbox"] {
+  display: none;
+
+}
+
+  @keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 1px var(--neonWhite),
+        0 0 2px var(--neonWhite),
+        0 0 3px var(--neonWhite),
+        0 0 4px var(--neonGreen),
+        0 0 5px var(--neonGreen),
+        0 0 6px var(--neonGreen),
+        0 0 7px var(--neonGreen),
+        0 0 20px var(--neonGreen);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }
+  
+
+
+  .layer:nth-child(1):after {
+    transform: translateZ(0px);
+    opacity: 0.5;
+
+  }
+  
+  .layer:nth-child(2):after {
+    transform: translateZ(0px);
+  }
+  
+  .layer:nth-child(3):after {
+    transform: translateZ(-3px);
+  }
+  
+  .layer:nth-child(4):after {
+    transform: translateZ(-3.5px);
+  }
+  
+  .layer:nth-child(5):after {
+    transform: translateZ(-6px);
+  }
+  
+  .layer:nth-child(6):after {
+    transform: translateZ(-7.5px);
+  }
+  
+  .layer:nth-child(7):after {
+    transform: translateZ(-9px);
+  }
+  
+  .layer:nth-child(8):after {
+    transform: translateZ(-10.5px);
+  }
+  
+  .layer:nth-child(9):after {
+    transform: translateZ(-12px);
+  }
+  
+  .layer:nth-child(10):after {
+    transform: translateZ(-13.5px);
+  }
+  
+  .layer:nth-child(11):after {
+    transform: translateZ(-15px);
+  }
+  
+  .layer:nth-child(12):after {
+    transform: translateZ(-16.5px);
+  }
+  
+  .layer:nth-child(13):after {
+    transform: translateZ(-18px);
+  }
+  
+  .layer:nth-child(14):after {
+    transform: translateZ(-19.5px);
+  }
+  
+  .layer:nth-child(15):after {
+    transform: translateZ(-21px);
+  }
+  
+  .layer:nth-child(16):after {
+    transform: translateZ(-22.5px);
+  }
+  
+  .layer:nth-child(17):after {
+    transform: translateZ(-24px);
+  }
+  
+  .layer:nth-child(18):after {
+    transform: translateZ(-25.5px);
+  }
+  
+  .layer:nth-child(19):after {
+    transform: translateZ(63px);
+    opacity: 0.5;
+
+  }
+  
+  .layer:nth-child(20):after {
+    transform: translateZ(-83px);
+    opacity: 0.5;
+  }
+  
+ 
+
+
+.scene {
+    position: relative;
+    transform-style: preserve-3d;
+    animation: sceneRotate var(--rotateSpeed) infinite linear;
+}
+
+.ball, .cube, .floor {
+    position: absolute;
+}
+
+
+
+@keyframes sceneRotate {
+    to {transform: rotateY(360deg);}
+}
+
+.cube {
+    width: 3em;
+    height: 2em;
+    top: -1em;
+    left: -1em;
+}
+
+.sign {
+    width: 3em;
+    height: 2em;
+    top: -1em;
+    left: -1em;
+
+}
+
+.left, .right, .front, .back{
+    opacity: 0.6;
+    border: 3px solid var(--pink);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: .5em;
+    box-shadow:  0 0  0.5em #000a inset;
+    border-radius: 10px;
+    box-shadow: 0 0 20px var(--pink);
+}
+
+.front {
+    transform: translateZ(1em);
+}
+
+.right {
+    transform: rotateY(90deg) translateZ(1em);
+    width: 2em;
+    left: 1em;
+}
+
+.back {
+    transform: rotateY(180deg) translateZ(1em);
+}
+
+.left {
+    transform: rotateY(270deg) translateZ(1em);
+    width: 2em;
+    
+
+}
+
+.top {
+    background-color: var(--boxColor);
+    opacity: 0.2;
+    position: absolute;
+    width: 3em;
+    height: 2em;
+    bottom: .5em;
+    transform: translateY(-50%) rotateX(90deg);
+    border-radius: 10px;
+
+}
+
+.bottom {
+    position: absolute;
+    bottom: .5em;
+    width: 3em;
+    height: 2em;
+    transform: translateY(50%) rotateX(90deg);
+    border-radius: 10px;
+}
+
+
+
+.s-left, .s-right, .s-front, .s-back, .s-top, .s-bottom {
+    border: 3px solid var(--pink);
+
+}
+
+.s-left, .s-right, .s-front, .s-back{
+    position: absolute;
+    height: 1em;
+    bottom: 1em;
+    box-shadow:  0 0  0.5em #000a inset;
+    border-radius: 10px;
+}
+
+.s-front {
+    transform: translateZ(.6em);
+    width: 2em;
+    left: .5em;
+    
+}
+
+.s-right {
+    transform: rotateY(90deg) translateZ(1.9em);
+    width: 1.2em;
+}
+
+.s-back {
+    transform: rotateY(180deg) translateZ(.6em);
+    width: 2em;
+    left: .5em;
+}
+
+.s-left {
+    transform: rotateY(270deg) translateZ(.1em);
+    width: 1.2em;
+    
+
+}
+
+
+.left::before, .right::before, .front::before, .back::before{
+    content: "";
+    position: absolute;
+    background-color: var(--boxColor);
+    
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+.floor {
+    width: 15em;
+    height: 15em;
+    top: 1em;
+    background-image:
+    radial-gradient(var(--neonGreen), #0000, #000 50%),
+    repeating-conic-gradient(from 45deg, #111 0deg 90deg, #222 90deg 180deg);
+    background-size:100%, 1em 1em;
+    transform: translate(-50%, -50%) rotateX(90deg);
+}
