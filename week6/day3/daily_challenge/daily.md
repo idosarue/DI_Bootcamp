@@ -1,0 +1,10 @@
+create table colors (color_id int not null, foreign key (color_id) references cars (car_id), color_name varchar(10));
+ create table owners(name varchar(10) not null, owner_model_id int not null, foreign key (owner_model_id) references cars(id));
+ select owners.name from owners join cars on owners.owner_model_id = cars.id join colors on colors.color_id = cars.id;
+select owners.name from owners inner join cars on owners.owner_model_id = cars.id inner join colors on colors.color_id = cars.id;
+select owners.name from owners full outer join cars on owners.owner_model_id = cars.id full outer join colors on colors.color_id = cars.id;
+select owners.name from owners left outer join cars on owners.owner_model_id = cars.id left outer join colors on colors.color_id = cars.id;
+select owners.name from owners right outer join cars on owners.owner_model_id = cars.id right outer join colors on colors.color_id = cars.id;
+select owners.name from owners right outer join cars on owners.owner_model_id = cars.id right outer join colors on colors.color_id = cars.id group by owners.name, colors.color_name;
+select owners.name from owners right outer join cars on owners.owner_model_id = cars.id right outer join colors on colors.color_id = cars.id group by owners.name, colors.color_name having colors.color_name != 'yellow';
+select model from cars union select color_name from colors union select name from owners;
