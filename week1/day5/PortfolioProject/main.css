@@ -12,6 +12,10 @@ font-family: 'Poppins', sans-serif;
 
 }
 
+
+li {
+    font-size: 1.5vw;
+}
 .c {
     text-align: center;
     word-wrap: break-word;
@@ -20,6 +24,7 @@ font-family: 'Poppins', sans-serif;
 .f {
     width: 50%;
     margin: auto;
+    font-size: 3vw;
 }
 
 header {
@@ -62,6 +67,10 @@ a {
     color: black;
 }
 
+#contact {
+    max-width: 25vw;
+}
+
 .me {
     border-radius: 50%;
     max-width: 50vw;
@@ -89,7 +98,7 @@ a {
 }
 
 .carousel {
-    width: 70%;
+    min-width: 80vw;
     margin: auto;
 }
 
